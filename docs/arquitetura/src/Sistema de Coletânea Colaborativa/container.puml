@@ -1,0 +1,22 @@
+@startuml container
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Container.puml
+
+LAYOUT_WITH_LEGEND()
+
+Person(col, "Colaborador", "Um usuário com capacidade de criar cifras para hinos.")
+Person(rev, "Revisor", "Responsável por revisar as cifras adicionadas por colaboradores, aprovando ou não.")
+Person(adm, "Administrador", "Capaz de gerenciar outros usuários e atuar como colaborador e revisor.")
+System_Boundary(scc, "Coletânea Colaborativa") {    
+    Container(spa, "Aplicação de Página Única (SPA)", "javascript com React e Tailwind", "Provê toda a funcionalidade para os usuários por meio de um navegador.")
+    Container(db, "Banco de dados", "MongoBD", "Salva todas as informações relativas ao sistema, como credenciais de acesso, hinos, detalhes, etc.")
+    Container(api, "API", "Strapi", "Provê as funcionalidades para o SPA por meio de HTTPS/JSON.")
+
+    Rel(api, db, "Lê & escreve")
+    Rel(spa, api, "Usa", "JSON/HTTPS")
+}
+
+Rel(col, spa, "Usa")
+Rel(rev, spa, "Usa")
+Rel(adm, spa, "Usa")
+
+@enduml

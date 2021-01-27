@@ -1,0 +1,21 @@
+@startuml spa
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+Container(api, "API", "Strapi", "Provê as funcionalidades para o SPA por meio de HTTPS/JSON.")
+
+Container_Boundary(spa, "Aplicação de Página Única (SPA)") {
+    Component(rotas, "Rotas", "React router", "Handler slient side routing")
+    Component(dados, "Base de dados", "LocalStorage", "Mecanismo usado para guardar dados do estado da aplicação.")
+    Component(acesso, "Login form", , "The login page")
+    Component(perfil, "Página de perfil", , "The page where the logged in user can view and edit his/her information")
+}
+
+Rel(spa, api, "Usa", "JSON/HTTPS")
+
+Rel(acesso, dados, "Usa");
+Rel(rotas, dados, "Usa");
+Rel(perfil, dados, "Usa");
+
+@enduml

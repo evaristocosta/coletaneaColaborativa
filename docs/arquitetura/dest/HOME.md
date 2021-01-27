@@ -1,0 +1,10 @@
+# Diagrama C4 do sistema
+
+**Nível 1: Diagrama de contexto**
+
+A Coletânea Colaborativa está inserida em um contexto livre, sem qualquer dependência externa.
+
+Os usuários considerados são 3, com suas respectivas funções de Colaborador, Revisor e Administrador.
+
+
+![diagram](https://www.plantuml.com/plantuml/svg/0/PPB1ZjCm48RlbVeEfXUwqhQvSEAqgsu5I5rObLQ8KpLhJnjBjYUonw7mDWi7n0Fm17annaafHIlbuFns_l_x9xv9396pTqfJO3moZKSlRD0k6rGrSvDULrM4B_E3vJe_veInFnXuhibNOAA5qBhSv6hnQlRW8F3sVbKvO4miqcunsCuRoHYFngFLxUSFsytkqxlDszrg-MRv_cvwLVG7Z8d2L9ExLfC5ENYa28RYH5wtNkMKkwTeIJ2zqj20jWO4KHuj255fku-GL0CHL6q3fVdawkmQiHMRDROs3OvhJ0s5r3srw5H3KSMo9pPYSN82OxMb0AQuoWdzZmdJjO8cKWl1aAAiGlU3BlF0U0cvDTu6c_ZSOo7Stmho0IC6NR0fSwHqhfSKAk1S-f2doqpPY0D_7_JnQsBqqwJrC2xaxdj0K7ydnxQ54Yb0tZ9U1FJZGYz-Q2ptorDZx6baOSEUeeVkP_SRBqUgcjZzcXdSIorpcl3BWMItFFAqp6Mod7cmJgLUBWYR6iMHCGPmwjvgwKjxLikZhY4S1EFoWzvpF5gZ6wx2K72ReEX5xN_bCxKV-7_g3GRJNxa_)

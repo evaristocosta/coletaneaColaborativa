@@ -1,0 +1,15 @@
+@startuml contexto
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+
+Person(col, "Colaborador", "Um usuário com capacidade de criar cifras para hinos.")
+Person(rev, "Revisor", "Responsável por revisar as cifras adicionadas por colaboradores, aprovando ou não.")
+Person(adm, "Administrador", "Capaz de gerenciar outros usuários e atuar como colaborador e revisor.")
+System(scc, "Coletânea Colaborativa", "Permite usuários criarem e editarem cifras e outras informações para hinos pré-definidos.")
+'System_Ext(es, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+
+Rel(col, scc, "Usa")
+Rel(rev, scc, "Usa")
+Rel(adm, scc, "Usa")
+@enduml
